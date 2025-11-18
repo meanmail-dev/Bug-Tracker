@@ -1,4 +1,4 @@
-name: Bug Report
+name: Plugin Bug Report
 description: Report a problem with the plugin
 labels: [ bug ]
 assignees: [ meanmail ]
