@@ -1,0 +1,35 @@
+name: Request Nginx Directive Support
+description: Ask to add support for an Nginx directive
+labels: [ directive ]
+assignees: [ meanmail ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Note:**  
+        • *Nginx Configuration* supports only **standard directives** from the official NGINX distribution.  
+        • *Nginx Configuration Pro* may include support for **popular NGINX extensions and modules**.
+
+  - type: input
+    id: directive_name
+    attributes:
+      label: Directive Name
+      placeholder: "For example: proxy_cache_lock"
+    validations:
+      required: true
+
+  - type: input
+    id: directive_doc
+    attributes:
+      label: Documentation Link
+      placeholder: "Official docs URL"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Request Description
+      placeholder: "Why do you need this directive? Any context?"
+    validations:
+      required: false
