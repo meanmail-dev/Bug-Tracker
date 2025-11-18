@@ -1,5 +1,6 @@
 name: Plugin Bug Report
 description: Report a problem with the plugin
+title: "[BUG] <title>"
 labels: [ bug ]
 assignees: [ meanmail ]
 body:
