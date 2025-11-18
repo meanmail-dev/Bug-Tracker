@@ -3,6 +3,8 @@ description: Ask to add support for an Nginx directive
 title: "[DIRECTIVE REQUEST] <title>"
 labels: [ directive ]
 assignees: [ meanmail ]
+type: Feature
+
 body:
   - type: markdown
     attributes:
