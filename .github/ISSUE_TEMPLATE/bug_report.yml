@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report a problem with the plugin
+labels: [ bug ]
+assignees: [ meanmail ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for using the plugin and for reporting the issue! 🙏
+        Please provide the information below to help us investigate faster.
+
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin Name
+      description: Nginx Configuration, Nginx Configuration Pro etc.
+      placeholder: "For example, Nginx Configuration Pro"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Plugin Version
+      placeholder: "For example, 2025.23"
+    validations:
+      required: true
+
+  - type: input
+    id: ide_version
+    attributes:
+      label: IDE Version
+      placeholder: "For example, IntelliJ IDEA 2024.2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      placeholder: What happened? What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: Step-by-step instructions
