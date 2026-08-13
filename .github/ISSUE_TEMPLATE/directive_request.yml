@@ -9,9 +9,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Note:**  
-        • *Nginx Configuration* supports only **standard directives** from the official NGINX distribution.  
+        **Note:**
+        • *Nginx Configuration* supports only **standard directives** from the official NGINX distribution.
         • *Nginx Configuration Pro* may include support for **popular NGINX extensions and modules**.
+
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Plugin Name
+      options:
+        - Nginx Configuration
+        - Nginx Configuration Pro
+    validations:
+      required: true
 
   - type: input
     id: directive_name
