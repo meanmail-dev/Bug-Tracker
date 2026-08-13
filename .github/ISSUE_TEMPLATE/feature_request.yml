@@ -1,0 +1,80 @@
+name: Feature Request
+description: Suggest a new feature or an improvement for a plugin
+title: "[FEATURE] <title>"
+labels: [ enhancement ]
+assignees: [ meanmail ]
+type: Feature
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping to make the plugins better! 🙏
+        For a missing Nginx directive please use the **Request Nginx Directive Support** template instead.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before requesting
+      options:
+        - label: I searched [existing issues](https://github.com/meanmail-dev/Bug-Tracker/issues?q=is%3Aissue) and did not find the same request.
+          required: true
+
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Plugin Name
+      description: Select the plugin the request belongs to.
+      options:
+        - Ansible Pro
+        - Django command runner
+        - Django PowerTools
+        - Docker Manager
+        - File Type Switcher
+        - Google Apps Script Support
+        - Hex Editor
+        - IDE Add-on Development Assistant (Beta)
+        - IDE Workflows (Beta)
+        - Image Editor
+        - Kubernetes Control Center
+        - KYAML
+        - MCP Servers for AI Assistants
+        - NetLinx Tools
+        - Nginx Configuration
+        - Nginx Configuration Pro
+        - Pascal Flow
+        - Prettify python
+        - Python Annotations
+        - Python Bytecode
+        - Qdrant
+        - Save
+        - SmartChangelist AI
+        - Visual GitHub Actions
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to Solve
+      description: What are you trying to do, and what makes it hard or impossible today?
+      placeholder: "When I ... I have to ... because the plugin does not ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: How should the plugin behave? Mock-ups, screenshots and examples are welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and Workarounds
+      description: What do you use instead right now?
+    validations:
+      required: false

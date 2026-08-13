@@ -12,12 +12,47 @@ body:
         Thank you for using the plugin and for reporting the issue! 🙏
         Please provide the information below to help us investigate faster.
 
-  - type: input
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before reporting
+      options:
+        - label: I use the latest version of the plugin and the problem is still there.
+          required: true
+        - label: I searched [existing issues](https://github.com/meanmail-dev/Bug-Tracker/issues?q=is%3Aissue) and did not find a duplicate.
+          required: true
+
+  - type: dropdown
     id: plugin
     attributes:
       label: Plugin Name
-      description: Nginx Configuration, Nginx Configuration Pro etc.
-      placeholder: "For example, Nginx Configuration Pro"
+      description: Select the plugin the issue belongs to.
+      options:
+        - Ansible Pro
+        - Django command runner
+        - Django PowerTools
+        - Docker Manager
+        - File Type Switcher
+        - Google Apps Script Support
+        - Hex Editor
+        - IDE Add-on Development Assistant (Beta)
+        - IDE Workflows (Beta)
+        - Image Editor
+        - Kubernetes Control Center
+        - KYAML
+        - MCP Servers for AI Assistants
+        - NetLinx Tools
+        - Nginx Configuration
+        - Nginx Configuration Pro
+        - Pascal Flow
+        - Prettify python
+        - Python Annotations
+        - Python Bytecode
+        - Qdrant
+        - Save
+        - SmartChangelist AI
+        - Visual GitHub Actions
+        - Other
     validations:
       required: true
 
@@ -25,6 +60,7 @@ body:
     id: plugin_version
     attributes:
       label: Plugin Version
+      description: Settings | Plugins | Installed — the version is shown next to the plugin name.
       placeholder: "For example, 2025.23"
     validations:
       required: true
@@ -33,7 +69,16 @@ body:
     id: ide_version
     attributes:
       label: IDE Version
+      description: Help | About — copy the full build, for example "IntelliJ IDEA 2024.2.3 (Ultimate Edition), build IU-242.23726.103".
       placeholder: "For example, IntelliJ IDEA 2024.2"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      placeholder: "For example, Windows 11, macOS 15.1, Ubuntu 24.04"
     validations:
       required: true
 
@@ -41,6 +86,7 @@ body:
     id: description
     attributes:
       label: Issue Description
+      description: What happened, and what did you expect to happen instead?
       placeholder: What happened? What did you expect?
     validations:
       required: true
@@ -49,4 +95,20 @@ body:
     id: steps
     attributes:
       label: Steps to Reproduce
-      placeholder: Step-by-step instructions
+      placeholder: |
+        1. Open a file ...
+        2. Type ...
+        3. See the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, Stack Trace or Screenshots
+      description: |
+        Attach the relevant part of the IDE log (Help | Show Log in Explorer/Finder → `idea.log`),
+        the stack trace from the error report, or a screenshot. Please remove any private data first.
+      render: text
+    validations:
+      required: false

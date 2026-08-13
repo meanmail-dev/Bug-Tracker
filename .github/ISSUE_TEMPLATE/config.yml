@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or usage help
+    url: https://github.com/meanmail-dev/Bug-Tracker/discussions
+    about: Ask how to use a plugin, share ideas or get help from the community.
+  - name: Plugin documentation
+    url: https://meanmail.dev
+    about: Guides and documentation for all meanmail.dev plugins.
+  - name: JetBrains Marketplace
+    url: https://plugins.jetbrains.com/vendor/meanmail
+    about: Install plugins, check the latest version and changelogs.

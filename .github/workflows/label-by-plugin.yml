@@ -1,0 +1,63 @@
+name: Label by plugin
+
+on:
+  issues:
+    types: [ opened, edited ]
+
+permissions:
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const plugins = [
+              'Ansible Pro',
+              'Django command runner',
+              'Django PowerTools',
+              'Docker Manager',
+              'File Type Switcher',
+              'Google Apps Script Support',
+              'Hex Editor',
+              'IDE Add-on Development Assistant (Beta)',
+              'IDE Workflows (Beta)',
+              'Image Editor',
+              'Kubernetes Control Center',
+              'KYAML',
+              'MCP Servers for AI Assistants',
+              'NetLinx Tools',
+              'Nginx Configuration',
+              'Nginx Configuration Pro',
+              'Pascal Flow',
+              'Prettify python',
+              'Python Annotations',
+              'Python Bytecode',
+              'Qdrant',
+              'Save',
+              'SmartChangelist AI',
+              'Visual GitHub Actions',
+            ];
+
+            const body = context.payload.issue.body || '';
+            const match = body.match(/^###\s+Plugin Name\s*\n+(.+?)\s*$/m);
+            if (!match) {
+              core.info('No "Plugin Name" section found, nothing to label.');
+              return;
+            }
+
+            const plugin = match[1].trim();
+            if (!plugins.includes(plugin)) {
+              core.info(`"${plugin}" is not a known plugin, nothing to label.`);
+              return;
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: [plugin],
+            });
+            core.info(`Labeled with "${plugin}".`);
