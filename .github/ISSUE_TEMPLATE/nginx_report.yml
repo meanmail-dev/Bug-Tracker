@@ -1,0 +1,16 @@
+name: Nginx Configuration Pro report
+description: Review a support report prepared by the plugin.
+title: "Nginx Configuration Pro: support request"
+labels: [ Nginx Configuration Pro ]
+assignees: [ meanmail ]
+
+body:
+  - type: textarea
+    id: report
+    attributes:
+      label: Report
+      description: Review the details prepared by the plugin and add anything else you want to share.
+      value: |
+        Support request for Nginx Configuration Pro.
+    validations:
+      required: true
