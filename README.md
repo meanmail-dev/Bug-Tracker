@@ -30,7 +30,7 @@ Not sure which one fits? Pick whatever feels closest — sorting it out is not y
 |:---:|:---:|:---:|
 | **5 hours** | **37 hours** | **6 of 9** |
 
-<sub>Median over the last 12 months, across 9 issues. Updated automatically on 28 September 2026.</sub>
+<sub>Median over the last 12 months, across 9 issues. Updated automatically on 05 October 2026.</sub>
 <!-- response-stats:end -->
 
 Numbers are honest medians recalculated straight from this tracker every week — not a promise, but a
